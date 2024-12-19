@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Volunteer Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Tint&display=swap" rel="stylesheet">
+    <script src="java.js"></script>
+    <script src="orgform.js"></script>
+
+</head>
+
+<body>
+
+
+    <img src="name.png" id="name">
+
+    <header style="text-align: right; margin: 0px;">
+        <p>Connecting volunteers around Portugal 🌍</p>
+        <div class="news-ticker">
+            <span class="ticker-title">Latest News:</span>
+            <div class="ticker-content">
+                <span class="news-item">Red Cross launches urgent appeal for winter coats and blankets to assist
+                    homeless communities during the cold months 🧥❄️</span>
+                <span class="news-item">UNICEF announces a new initiative to provide educational supplies for 1 million
+                    underprivileged children worldwide 📚✏️</span>
+                <span class="news-item">Save the Children invites volunteers to join their emergency response team in
+                    areas affected by flooding 🚨🌊</span>
+                <span class="news-item">Doctors Without Borders opens new mobile clinics to provide free healthcare in
+                    remote regions of Africa 🏥🌍</span>
+                <span class="news-item">Habitat for Humanity seeks volunteers for a week-long home-building marathon in
+                    low-income neighborhoods 🛠️🏠</span>
+                <span class="news-item">Greenpeace reports record participation in their global beach cleanup campaign,
+                    removing 100 tons of plastic waste 🌊♻️</span>
+                <span class="news-item">WWF warns of a significant decline in the tiger population and launches a
+                    fundraiser to support conservation efforts 🐅🌿</span>
+                <span class="news-item">Amnesty International urges volunteers to write letters supporting political
+                    prisoners in over 30 countries 📜✊</span>
+                <span class="news-item">Local animal shelters call for foster families as they face overcrowding with
+                    rescued pets during winter months 🐾🏡</span>
+                <span class="news-item">Big Brothers Big Sisters announces a mentorship success story: How one hour a
+                    week changed a child's life forever 💡👦</span>
+                <span class="news-item">Charity Water celebrates bringing clean water to 50 new villages in Southeast
+                    Asia, impacting 20,000 people 💧🙏</span>
+                <span class="news-item">Rotary International sets ambitious goals to raise funds for eradicating polio
+                    by 2025, with your help 🌐💉</span>
+                <span class="news-item">Feeding America distributes over 5 million meals in food banks nationwide;
+                    volunteers urgently needed this holiday season 🍽️❤️</span>
+                <span class="news-item">Team Rubicon mobilizes volunteers to assist communities devastated by wildfires
+                    in California 🔥🤝</span>
+                <span class="news-item">Meals on Wheels launches a "12 Days of Giving" campaign to deliver holiday meals
+                    and cheer to seniors in isolation 🎁🍗</span>
+                <span class="news-item">UNHCR highlights the journey of refugees finding safety and starting anew,
+                    emphasizing the importance of volunteer support ⛺🌟</span>
+                <span class="news-item">Local libraries seek literacy volunteers to mentor children and teens in
+                    low-income communities 📖🤗</span>
+                <span class="news-item">Save the Bees campaign encourages households to plant wildflowers and create
+                    safe habitats for pollinators 🌼🐝</span>
+                <span class="news-item">UNESCO celebrates International Heritage Day, calling for volunteers to help
+                    preserve cultural sites under threat 🏛️✨</span>
+                <span class="news-item">Community Centers report an increase in demand for after-school programs and
+                    need volunteers to support working families 🏫🎒</span>
+
+            </div>
+        </div>
+    </header>
+    <div class="main-content">
+
+        <section id="btn-about" style="text-align: center; margin-bottom: 20px;">
+            <button onclick="window.location.href='aboutus.html'">Click to Learn more about us</button>
+        </section>
+
+        <section id="btn-orgform" style="text-align: center; margin-bottom: 20px;">
+            <button onclick="window.location.href='orgform.html'">Apply your event</button>
+        </section>
+
+        <!--Button to VolunteerHub Community html to know who is doing wich action/event-->
+        <section id="btn-community" style="text-align: center; margin-bottom: 20px;">
+            <button onclick="window.location.href='community.html'">VolunteerHub Community</button>
+        </section>
+
+
+        <!-- Filter Section -->
+
+        <!-- News Section -->
+        <section id="news" style="text-align: center; margin-bottom: 30px;">
+            <h2>Global Volunteer Organizations</h2>
+            <div style="display: flex; justify-content: center; gap: 20px;">
+                <div>
+                    <a href="https://www.redcross.org" target="_blank">
+                        <img src="org/pngwing.com.png" alt="Red Cross" style="width: 100px; height: 100px;">
+                        
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.unicef.org" target="_blank">
+                        <img src="org/pngwing.com (1).png" alt="UNICEF" style="width: 100px; height: 100px;">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.savethechildren.org" target="_blank">
+                        <img src="org/pngwing.com (3).png" alt="Save the Children" style="width: 100px; height: 100px;">
+                    </a>
+                </div>
+            </div>
+    </div>
+
+    <!-- Location Dropdown and Volunteer Actions -->
+    <section id="actions-section" style="text-align: center; margin-bottom: 30px;">
+        <h2>Find Volunteer Actions Near You</h2>
+        <select id="location" onchange="filterActions()">
+            <option value="all">Select Location</option>
+            <option value="Aveiro">Aveiro</option>
+            <option value="Beja">Beja</option>
+            <option value="Braga">Braga</option>
+            <option value="Bragança">Bragança</option>
+            <option value="Castelo Branco">Castelo Branco</option>
+            <option value="Coimbra">Coimbra</option>
+            <option value="Évora">Évora</option>
+            <option value="Faro">Faro</option>
+            <option value="Guarda">Guarda</option>
+            <option value="Lisboa">Lisboa</option>
+            <option value="Portalegre">Portalegre</option>
+            <option value="Porto">Porto</option>
+            <option value="Santarém">Santarém</option>
+            <option value="Setúbal">Setúbal</option>
+            <option value="Viana do Castelo">Viana do Castelo</option>
+            <option value="Vila Real">Vila Real</option>
+            <option value="Viseu">Viseu</option>
+            <option value="RA Madeira">RA Madeira</option>
+            <option value="RA Açores">RA Açores</option>
+
+        </select>
+
+        <div id="actions" style="margin-top: 20px;">
+            <!-- Volunteer actions will be dynamically displayed here -->
+        </div>
+    </section>
+
+    <!-- Boost Button (Keeping Your Fun Element) -->
+    <div id="chatbot-icon">
+        <img src="logo.png" alt="Chatbot" onclick="toggleChatbot()" />
+    </div>
+    
+    <div id="chatbot-container">
+        <div id="chatbot-header">
+            <span>VolunteerBot</span>
+            <button onclick="toggleChatbot()">X</button>
+        </div>
+        <div id="chatbot-content">
+            <!-- Chatbot messages and options will appear here -->
+        </div>
+    </div>
+
+    </div>
+    <nav>
+        <div class="badge-container">
+            <!-- Contact Badges -->
+        
+        
+            <a href="https://www.instagram.com/volunteerhub_codeforall_/" target="_blank" aria-label="Follow us on Instagram">
+                <img class="badge"
+                    src="https://img.shields.io/badge/-Instagram-E4405F?logo=instagram&logoColor=white&style=for-the-badge"
+                    alt="Instagram">
+            </a>
+
+            <a href="mailto:volunteerhub2024@gmail.com" target="_blank" aria-label="Email us at Gmail">
+                <img class="badge"
+                    src="https://img.shields.io/badge/-Gmail-D14836?logo=gmail&logoColor=white&style=for-the-badge"
+                    alt="Gmail">
+            </a>
+
+            <a href="https://www.facebook.com/volunteershub" target="_blank" aria-label="Follow us on Facebook">
+                <img class="badge"
+                    src="https://img.shields.io/badge/-Facebook-1877F2?logo=facebook&logoColor=white&style=for-the-badge"
+                    alt="Facebook">
+            </a>
+        
+           
+        
+        </div>
+        
+
+        <!-- Footer Text -->
+        <footer style="text-align: center; margin-bottom: 10px; font-size: 0.9em;">
+            <p>&copy; 2024 Volunteer Hub. Made with ❤️ by VolunteerHUB Team.</p>
+        </footer>
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const actionsContainer = document.getElementById('actions');
+
+            // Get the event data from sessionStorage
+            const eventData = JSON.parse(sessionStorage.getItem('actions')) || [];
+
+            // If there's event data, display it
+            if (eventData.length > 0) {
+                // Loop through each event and display it in the actions section
+                eventData.forEach(event => {
+                    const eventDiv = document.createElement('div');
+                    eventDiv.classList.add('event'); // Optional, for styling purposes
+                    
+                    // Add the event details to the div
+                   /* eventDiv.innerHTML = `
+                        <h3>Event Name: ${event.name}</h3>
+                        <p>Organization: ${event.organizationName}</p>
+                        <p>Location: ${event.location}</p>
+                        <p>Description: ${event.description}</p>
+                        <p>Date: ${event.date}</p>
+                        <p>Email: ${event.email}</p>
+                    `;
+                    
+                    // Append the new event div to the actions container
+                    actionsContainer.appendChild(eventDiv);*/
+
+               
+                });
+                 sessionStorage.setItem('actions', JSON.stringify(eventData));
+            } else {
+                // If no events are found in sessionStorage, display a message
+                actionsContainer.innerHTML = "<p>No events available.</p>";
+            }
+        });
+    </script>
+</body>
+
+</html>

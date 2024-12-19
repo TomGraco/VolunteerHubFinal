@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Volunteer Hub Form</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="java.js"></script>
+    <script src="./formvolunteers.js"></script>
+</head>
+
+<body>
+    <img src="name.png" id="logo">
+    <div class="'form-wrapper'">
+        <h2>You've selected the following application:</h2>
+        <p id="selectedApplication"></p>
+        <p id="actionDescription"></p>
+        <p id="actionLocation"></p>
+        <p id="actionDate"></p>
+        <p id="actionOrganization"></p>
+
+        <h3>Application Details:</h3>
+        <form id="volunteerForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" required><br>
+            <label for="location">Location:</label>
+            <input type="text" id="location" required><br>
+            <input type="submit" value="Submit">
+        </form>
+        <a href="main.html">Go to the main page</a>
+    </div>
+    <script src="app.js"></script>
+    <footer>
+        <p>&copy; 2024 Volunteer Hub. Made with ❤️ by VolunteerHUB Team.</p>
+    </footer>
+</body>
+
+</html>

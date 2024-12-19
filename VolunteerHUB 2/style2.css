@@ -1,0 +1,137 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Form wrapper container */
+.form-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading styles */
+h2 {
+    color: #f57c00;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styles */
+p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Label styles for the form fields */
+label {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 10px;
+    display: block;
+    color: #333;
+}
+
+/* Input and textarea fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea {
+    width: 60%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+select{
+    width: 60%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+#logo{
+    width:auto;
+    height:100px;
+}
+
+/* Focus effect for form inputs */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #e77000;
+    outline: none;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    background-color: #f57c00;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Submit button hover effect */
+input[type="submit"]:hover {
+    background-color: #f57c00;
+}
+
+/* Link styling */
+a {
+    color: #f57c00;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* Link hover effect */
+a:hover {
+    color: #f57c00;
+}
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 0.8em;
+    color: #fff;
+    margin: 0;
+}

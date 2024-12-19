@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volunteer Hub Community</title>
+    <link rel="stylesheet" href="style3.css">
+    <script src="java.js"></script>
+    <script src="formvolunteers.js"></script>
+</head>
+<body>
+    <img src="name.png" id="logo">
+    <header>
+        <h2>VoluHubbeers</h2>
+        
+    </header>
+    <main>
+        <div id="eventsContainer"></div>
+        <div id="volunteersList">
+            <div id="volunteerBox"></div>
+            <!-- The volunteer list will be dynamically populated here -->
+        </div>
+        <a href="main.html">Go to the main page</a>
+    </main>
+    
+        
+    
+    <footer>
+        <p>&copy; 2024 Volunteer Hub. Made with ❤️ by VolunteerHUB Team.</p>
+    </footer>
+    <script>
+        // This script populates the volunteer list from sessionStorage
+        document.addEventListener('DOMContentLoaded', function () {
+            const volunteerList = document.getElementById('volunteersList');
+
+            // Get volunteers from sessionStorage
+            const volunteers = JSON.parse(sessionStorage.getItem('volunteers')) || [];
+
+            // Clear the volunteer list
+            volunteerList.innerHTML = '';
+
+            // Populate the list
+            volunteers.forEach(volunteer => {
+                const volunteerDiv = document.createElement('div');
+                //volunteerDiv.style.marginBottom = '20px';
+                volunteerDiv.classList.add('volunteer-card');
+                
+
+                volunteerDiv.innerHTML = `
+                    <h3>${volunteer.name}</h3>
+                    <p>Email: ${volunteer.email}</p>
+                    <p>Phone: ${volunteer.phone}</p>
+                    <p>Helping: ${volunteer.organization}</p>
+                `;
+
+                volunteerList.appendChild(volunteerDiv);
+            });
+        });
+    </script>
+</body>
+</html>

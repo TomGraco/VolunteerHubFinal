@@ -1,0 +1,393 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+    
+}
+
+body::before {
+    content: ''; /* Creates the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('logo.png'); /* Your background image */
+    background-size: 20%;
+    background-attachment: fixed; /* Keep the image fixed when scrolling */
+    background-position:left;
+    background-repeat: no-repeat;
+    animation: rotate-background 20s linear infinite; /* Apply rotation animation */
+    z-index: -1; /* Make sure the background is behind the content */
+}
+
+@keyframes rotate-background {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+h1, h2, h3 {
+    color: #222;
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #f57c00; /* Orange link color */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    background-color: white; /* Black background for contrast */
+    color: black;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+.news-ticker {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #f57c00; /* Orange background for ticker */
+    color: black;
+    font-size: 0.9em;
+    padding: 15px 20px;
+    margin-top: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.ticker-title {
+    font-weight: bold;
+    font-weight: bold;
+    margin-right: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 15px 20px;
+    position: absolute;
+    z-index: 20;
+    top:20;
+    left:0;
+   
+}
+
+/* Ticker Content */
+.ticker-content {
+
+    display: flex;
+    align-items: center;
+    animation: scroll-left 180s linear infinite;
+  
+    
+}
+.news-item {
+    display: inline-block;
+    margin-right: 30px;
+    padding-right: 40px;
+}
+@keyframes scroll-left {
+    from {
+        transform: translateX(10%); /* Start from the right edge */
+    }
+    to {
+        transform: translateX(-100%); /* End at the left edge */
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .main-content{
+        margin-right: 20;
+    }
+    .left-section
+    .rigth-section{
+        margin-right: 0;
+    }
+}
+#name{
+
+    position: fixed; /* Fixes the name to the viewport */
+    top: 0; /* Aligns the logo to the top of the viewport */
+    left: 0; /* Aligns the logo to the left of the viewport */
+    width: 300px; /* Set the width of the logo (adjust as needed) */
+    height: auto; /* Maintain the logo's aspect ratio */
+    padding: 10px;
+    z-index: 1000;
+}
+#logo {
+    position: fixed; /* Fixes the logo to the viewport */
+    top: 0px; /* Adjust top distance from the top of the screen */
+    left: 0px; /* Adjust left distance from the left of the screen */
+    width: 135px; /* Optional: resize the logo to fit your design */
+    height: 135px; /* Keeps the aspect ratio intact */
+    background-color: white; 
+}
+
+
+header h1 {
+    font-family: 'Bungee Tint', cursive;
+    font-size: 2.5em;
+    margin: 0;
+    margin-right: 120px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 0;
+    margin-right: 40px;
+}
+
+
+#btn-about button {
+    background-color: #f57c00; /* Orange button */
+    color: #fff;
+    border: none;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 200px;
+    margin-bottom: 20px;
+}
+
+#btn-about button:hover {
+    background-color: #e66900; /* Slightly darker orange on hover */
+    transform: scale(1.05); /* Subtle hover effect */
+    
+}
+
+/* Button Section */
+#btn-community button {
+    background-color: #f57c00; /* Orange button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+#btn-community button:hover {
+    background-color: #e66900; /* Slightly darker orange on hover */
+    transform: scale(1.05); /* Subtle hover effect */
+}
+
+/* News Section */
+#news ul {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+#news li {
+    margin-bottom: 10px;
+}
+
+#news h3 {
+    margin-top: 30px;
+    color: #555;
+}
+
+#actions-section {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px; /* Add padding inside the section */
+    background-color: #ffffff; /* White background */
+    border: 2px solid #f57c00; /* Orange border around the section */
+    border-radius: 10px; /* Rounded corners for the box */
+    width: 100%; /* Ensure the section spans the full width */
+    max-width: 600px; /* Limit the maximum width to prevent stretching */
+    margin: 0 auto; /* Center the section horizontally */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+/* Dropdown and Actions */
+#actions-section select {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    
+}
+
+
+#actions-section #actions {
+    margin-top: 20px;
+    position:relative;
+    padding-bottom: 140px;
+}
+
+#actions-section h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+/* Boost Button */
+section button {
+    background-color: #f57c00; /* Orange button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    
+}
+
+section button:hover {
+    background-color: #e66900;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding:0;
+    margin-top: 0px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8em;
+    margin-bottom: 0%;
+}
+
+/* Fixed Navigation Badges at the Bottom */
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000; /* Black background for professionalism */
+    padding: 10px 0;
+    border-top: 3px solid #f57c00; /* Thin orange border for branding */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+nav .badge-container {
+    display:flex;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+nav .badge {
+    margin: 5px;
+    display: inline-block;
+    transition: transform 0.3s;
+    border-radius: 10px;
+}
+
+nav .badge:hover {
+    transform: scale(1.2); /* Slight zoom on hover for interactivity */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    #btn-community button, #actions-section select {
+        font-size: 0.9em;
+    }
+
+    section button {
+        font-size: 0.9em;
+    }
+}
+#chatbot-icon {
+    position: fixed;
+    bottom: 110px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+    cursor: pointer;
+    
+}
+
+#chatbot-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Slightly darker orange on hover */
+
+}
+
+/* Chatbot Container */
+#chatbot-container {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    z-index: 1001;
+}
+
+/* Chatbot Header */
+#chatbot-header {
+    background: #f57c00;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Chatbot Content */
+#chatbot-content {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+/* Chatbot Option Buttons */
+.chatbot-option {
+    font-weight: bold;
+    background-color: #f57c00;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.chatbot-option:hover {
+    background-color: #000;
+}
+
